@@ -37,17 +37,57 @@ public class LargestNumberTest {
         int[] nums2 = {3,30,34,5,9};
         int[] nums3 = {1};
         int[] nums4 = {10};
-        System.out.println(largestNumber(nums1));
+        System.out.println(largestNumber(nums2));
     }
 
     public static String largestNumber(int[] nums) {
-        Map<Integer, String> map = new HashMap<>();
-        for (int num : nums) {
-            Integer key = Integer.valueOf(String.valueOf(num).split("")[0]);
-            map.put(key, String.valueOf(num));
+        String[] src = new String[nums.length];
+        for (int i = 0; i < nums.length; i++) {
+            src[i] = String.valueOf(nums[i]);
         }
+        quickSort(src, 0, src.length-1);
+        if ("0".equals(src[0])) {
+            return "0";
+        }
+        StringBuilder sb = new StringBuilder();
+        for (String s : src) {
+            sb.append(s);
+        }
+        return sb.toString();
+    }
 
-        return "";
+    /**
+     * 使用快速排序对字符串数组进行排序
+     *
+     * @param src string数组
+     * @param begin 比较的开始下标
+     * @param end 最后下标
+     */
+    public static void quickSort(String[] src, int begin, int end) {
+        if (begin < end) {
+            String key = src[begin];
+            int i = begin;
+            int j = end;
+            while (i < j) {
+                while (i<j && (src[j]+key).compareTo(key+src[j]) < 0) {
+                    j--;
+                }
+                if (i < j) {
+                    src[i] = src[j];
+                    i++;
+                }
+                while (i<j && (src[i]+key).compareTo(key+src[i]) > 0) {
+                    i++;
+                }
+                if (i<j) {
+                    src[j] = src[i];
+                    j--;
+                }
+            }
+            src[i] = key;
+            quickSort(src, begin, i-1);
+            quickSort(src, i+1, end);
+        }
     }
 
 }
