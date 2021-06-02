@@ -5,13 +5,13 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * 206. ·´×ªÁ´±í
- * ·´×ªÒ»¸öµ¥Á´±í¡£
+ * 206. åè½¬é“¾è¡¨
+ * åè½¬ä¸€ä¸ªå•é“¾è¡¨ã€‚
  * <p>
- * Ê¾Àı:
+ * ç¤ºä¾‹:
  * <p>
- * ÊäÈë: 1->2->3->4->5->NULL
- * Êä³ö: 5->4->3->2->1->NULL
+ * è¾“å…¥: 1->2->3->4->5->NULL
+ * è¾“å‡º: 5->4->3->2->1->NULL
  *
  * @author walle
  * @date 2021/4/23 17:41
@@ -27,9 +27,9 @@ public class ReverseList {
     }
 
     /**
-     * µ¥Á´±í×ªÊı×é
-     * @param node µ¥Á´±í
-     * @return intÊı×é
+     * å•é“¾è¡¨è½¬æ•°ç»„
+     * @param node å•é“¾è¡¨
+     * @return intæ•°ç»„
      */
     public static int[] initArray(ListNode node) {
         List<Integer> numsArray = new ArrayList<>();
@@ -46,9 +46,9 @@ public class ReverseList {
     }
 
     /**
-     * Êı×é×ªµ¥Á´±í
-     * @param nums intÊı×é
-     * @return µ¥Á´±í
+     * æ•°ç»„è½¬å•é“¾è¡¨
+     * @param nums intæ•°ç»„
+     * @return å•é“¾è¡¨
      */
     public static ListNode initList(int[] nums) {
 

@@ -1,15 +1,15 @@
 package com.fool.easy;
 
 /**
- * 1822. Êý×éÔªËØ»ýµÄ·ûºÅ
- * ÒÑÖªº¯Êý signFunc(x) ½«»á¸ù¾Ý x µÄÕý¸º·µ»ØÌØ¶¨Öµ£º
+ * 1822. æ•°ç»„å…ƒç´ ç§¯çš„ç¬¦å·
+ * å·²çŸ¥å‡½æ•° signFunc(x) å°†ä¼šæ ¹æ® x çš„æ­£è´Ÿè¿”å›žç‰¹å®šå€¼ï¼š
  *
- * Èç¹û x ÊÇÕýÊý£¬·µ»Ø 1 ¡£
- * Èç¹û x ÊÇ¸ºÊý£¬·µ»Ø -1 ¡£
- * Èç¹û x ÊÇµÈÓÚ 0 £¬·µ»Ø 0 ¡£
- * ¸øÄãÒ»¸öÕûÊýÊý×é nums ¡£Áî product ÎªÊý×é nums ÖÐËùÓÐÔªËØÖµµÄ³Ë»ý¡£
+ * å¦‚æžœ x æ˜¯æ­£æ•°ï¼Œè¿”å›ž 1 ã€‚
+ * å¦‚æžœ x æ˜¯è´Ÿæ•°ï¼Œè¿”å›ž -1 ã€‚
+ * å¦‚æžœ x æ˜¯ç­‰äºŽ 0 ï¼Œè¿”å›ž 0 ã€‚
+ * ç»™ä½ ä¸€ä¸ªæ•´æ•°æ•°ç»„ nums ã€‚ä»¤ product ä¸ºæ•°ç»„ nums ä¸­æ‰€æœ‰å…ƒç´ å€¼çš„ä¹˜ç§¯ã€‚
  *
- * ·µ»Ø signFunc(product) ¡£
+ * è¿”å›ž signFunc(product) ã€‚
  *
  * @author Qiq
  * @date 2021/4/21
@@ -23,11 +23,11 @@ public class NumsProduct {
 
     public static int arraySign(int[] nums) {
         /*
-        ÌâÄ¿ÊÇÊý×éÖÐËùÓÐÔªËØÖµµÄ³Ë»ýµÄÕý¸º£¬¿ÉÒÔ²»¼ÆËã³Ë»ý£¬Ö±½Ó¸ù¾Ý·ûºÅÅÐ¶ÏÕý¸º
-        ÔòÖ»ÐèÒªÅÐ¶ÏÏà³ËÊý×ÖÖÐÓÐ¶àÉÙ¸ö¸ººÅ£¬ÈçÓÐ n¸ö¸ººÅ£¬ÔòÓÐ n%2 == 0 ³Ë»ýÎªÕý£¬·´Ö®Îª¸º
-        Èç¹ûÔªËØÖÐ°üº¬0ÔòÖ±½Ó·µ»Ø0
+        é¢˜ç›®æ˜¯æ•°ç»„ä¸­æ‰€æœ‰å…ƒç´ å€¼çš„ä¹˜ç§¯çš„æ­£è´Ÿï¼Œå¯ä»¥ä¸è®¡ç®—ä¹˜ç§¯ï¼Œç›´æŽ¥æ ¹æ®ç¬¦å·åˆ¤æ–­æ­£è´Ÿ
+        åˆ™åªéœ€è¦åˆ¤æ–­ç›¸ä¹˜æ•°å­—ä¸­æœ‰å¤šå°‘ä¸ªè´Ÿå·ï¼Œå¦‚æœ‰ nä¸ªè´Ÿå·ï¼Œåˆ™æœ‰ n%2 == 0 ä¹˜ç§¯ä¸ºæ­£ï¼Œåä¹‹ä¸ºè´Ÿ
+        å¦‚æžœå…ƒç´ ä¸­åŒ…å«0åˆ™ç›´æŽ¥è¿”å›ž0
          */
-        // ¸ºÊý¸öÊý
+        // è´Ÿæ•°ä¸ªæ•°
         int negative = 0;
         for (int num : nums) {
             if (num == 0) {
