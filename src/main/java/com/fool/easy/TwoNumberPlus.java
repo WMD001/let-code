@@ -1,5 +1,7 @@
 package com.fool.easy;
 
+import com.fool.common.ListNode;
+
 /**
  * 2. 两数之和
  *

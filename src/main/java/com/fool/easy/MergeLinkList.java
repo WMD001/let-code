@@ -1,5 +1,7 @@
 package com.fool.easy;
 
+import com.fool.common.ListNode;
+
 /**
  * 合并两个升序列表为一个升序列表
  * 21. 合并两个有序链表
@@ -8,8 +10,12 @@ public class MergeLinkList {
 
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
 
-        if (l1 == null) return l2;
-        if (l2 == null) return l1;
+        if (l1 == null) {
+            return l2;
+        }
+        if (l2 == null) {
+            return l1;
+        }
 
         ListNode result = new ListNode();
         ListNode temp = result;
@@ -34,21 +40,4 @@ public class MergeLinkList {
         return result.next;
     }
 
-}
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode() {
-    }
-
-    ListNode(int val) {
-        this.val = val;
-    }
-
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
 }
