@@ -1,8 +1,11 @@
 package com.fool.easy;
 
+import com.fool.common.ListNode;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Stack;
 
 /**
  * 206. 反转链表
@@ -62,23 +65,6 @@ public class ReverseList {
         return head;
     }
 
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
-
 
     public static ListNode reverseList(ListNode node) {
 
@@ -94,6 +80,19 @@ public class ReverseList {
         return head;
     }
 
+    public static int[] reversePrint(ListNode head) {
+        Stack<Integer> stack = new Stack<>();
+        while (head != null) {
+            stack.push(head.val);
+            head = head.next;
+        }
+        int size = stack.size();
+        int[] res = new int[size];
+        for (int i = 0; i < size; i++) {
+            res[i] = stack.pop();
+        }
+        return res;
+    }
 
 
 }

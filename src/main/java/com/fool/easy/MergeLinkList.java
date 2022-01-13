@@ -1,5 +1,7 @@
 package com.fool.easy;
 
+import com.fool.common.ListNode;
+
 /**
  * 合并两个升序列表为一个升序列表
  * 21. 合并两个有序链表
