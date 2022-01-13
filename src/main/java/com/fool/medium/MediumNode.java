@@ -1,5 +1,7 @@
 package com.fool.medium;
 
+import com.fool.common.ListNode;
+
 import java.util.Arrays;
 import java.util.LinkedList;
 
@@ -39,35 +41,5 @@ public class MediumNode {
 
     }
 
-
-    public static ListNode convertNode(Integer[] nums) {
-        // 数组转链表
-
-        return null;
-    }
-
-    static class ListNode {
-
-        public Integer value;
-        public ListNode next;
-
-        public ListNode(Integer value) {
-            this.value = value;
-            this.next = null;
-        }
-
-        public Integer value() {
-            return this.value;
-        }
-
-        public Boolean hasNext() {
-            return this.next != null;
-        }
-
-        public ListNode next() {
-            return this.next;
-        }
-
-    }
 
 }

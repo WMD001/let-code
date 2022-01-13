@@ -1,5 +1,7 @@
 package com.fool.medium;
 
+import com.fool.common.ListNode;
+
 /**
  * 设计一个链表
  *
@@ -89,13 +91,4 @@ public class MyLinkedList {
         linkedList.get(0);
     }
 
-}
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
-    }
 }

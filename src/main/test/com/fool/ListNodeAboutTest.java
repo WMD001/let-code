@@ -2,6 +2,7 @@ package com.fool;
 
 import com.fool.common.ListNode;
 import com.fool.easy.ReverseList;
+import com.fool.medium.RemoveNthNode;
 import com.fool.medium.RotateRight;
 import org.junit.Assert;
 import org.junit.Before;
@@ -15,11 +16,16 @@ public class ListNodeAboutTest {
     int[] ex1 = new int[]{1, 2, 3, 4, 5};
     int[] ex2 = new int[]{0, 1, 2};
     int[] ex3 = new int[]{6, 5, 4, 3, 2, 1};
+    ListNode exNode1 = ReverseList.initList(ex1);
+    ListNode exNode2 = ReverseList.initList(ex2);
+    ListNode exNode3 = ReverseList.initList(ex3);
     static RotateRight rotateRight;
+    static RemoveNthNode removeNthNode;
 
     @BeforeClass
     public static void beforeClass() {
         rotateRight = new RotateRight();
+        removeNthNode = new RemoveNthNode();
     }
 
     @Before
@@ -45,6 +51,12 @@ public class ListNodeAboutTest {
         Assert.assertArrayEquals(ReverseList.initArray(resNode), new int[]{2, 1, 6, 5, 4, 3});
     }
 
+    @Test
+    public void removeNthFromEnd() {
+//        ListNode resNode = removeNthNode.removeNthFromEnd(exNode1, 2);
+        ListNode resNode = removeNthNode.removeNthFromEndByOne(exNode1, 2);
+        Assert.assertArrayEquals(new int[]{1,2,3,5}, ReverseList.initArray(resNode));
+    }
 
 }
 
