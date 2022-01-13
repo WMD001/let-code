@@ -22,7 +22,7 @@ public class BracketsValid {
     }
 
 
-    public static Boolean check(String str) {
+    public static Boolean check(String s) {
         /*
         判断字符串中的括号是否有效
             判断字符串是否为null或者空字符串，是则判定无效 return false
@@ -32,31 +32,23 @@ public class BracketsValid {
              如果遍历完成，没有中途退出，说明字符串括号正确 return true
          */
 
-        if (str == null || "".equals(str)) {
+        if (s == null || "".equals(s) || s.length() % 2 != 0 ) {
             return false;
         }
-        Map<String, String> map = new HashMap<>(1<<2);
-        map.put(")", "(");
-        map.put("]", "[");
-        map.put("}", "{");
 
-        Stack<String> stack = new Stack<>();
-        String[] items = str.split("");
-        for (String item : items) {
-            if (map.containsKey(item)) {
-                if (stack.empty()) {
-                    return false;
-                }
-                String v = map.get(item);
-                if (!v.equals(stack.pop())) {
-                    return false;
-                }
-            }
-            if (map.containsValue(item)) {
-                stack.push(item);
+        Stack<Character> stack = new Stack<>();
+        for (char c : s.toCharArray()) {
+            if (c == '(') {
+                stack.push(')');
+            } else if (c == '{') {
+                stack.push('}');
+            } else if (c == '[') {
+                stack.push(']');
+            } else if (stack.empty() || c!=stack.pop()) {
+                return false;
             }
         }
-        return true;
+        return stack.empty();
     }
 
 }
