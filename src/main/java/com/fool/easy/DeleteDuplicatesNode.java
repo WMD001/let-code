@@ -1,4 +1,4 @@
-package com.fool.medium;
+package com.fool.easy;
 
 import com.fool.common.ListNode;
 

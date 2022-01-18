@@ -2,10 +2,7 @@ package com.fool;
 
 import com.fool.common.ListNode;
 import com.fool.easy.ReverseList;
-import com.fool.medium.RemoveNthNode;
-import com.fool.medium.RemoveRepeatNode;
-import com.fool.medium.RotateRight;
-import com.fool.medium.SwapPairs;
+import com.fool.medium.*;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -78,6 +75,15 @@ public class ListNodeAboutTest {
         ListNode listNode = removeRepeatNode.deleteDuplicates(ReverseList.initList(ex4));
         System.out.println(Arrays.toString(ReverseList.initArray(listNode)));
 
+    }
+
+    @Test
+    public void partition() {
+        PartitionList partitionList = new PartitionList();
+        int[] ex = {1,4,3,2,5,5};
+        System.out.println(Arrays.toString(ex));
+        ListNode partition = partitionList.partition(ReverseList.initList(ex), 3);
+        System.out.println(Arrays.toString(ReverseList.initArray(partition)));
     }
 
 }
