@@ -3,6 +3,7 @@ package com.fool;
 import com.fool.common.ListNode;
 import com.fool.easy.ReverseList;
 import com.fool.medium.RemoveNthNode;
+import com.fool.medium.RemoveRepeatNode;
 import com.fool.medium.RotateRight;
 import com.fool.medium.SwapPairs;
 import org.junit.Assert;
@@ -58,7 +59,7 @@ public class ListNodeAboutTest {
     public void removeNthFromEnd() {
 //        ListNode resNode = removeNthNode.removeNthFromEnd(exNode1, 2);
         ListNode resNode = removeNthNode.removeNthFromEndByOne(exNode1, 2);
-        Assert.assertArrayEquals(new int[]{1,2,3,5}, ReverseList.initArray(resNode));
+        Assert.assertArrayEquals(new int[]{1, 2, 3, 5}, ReverseList.initArray(resNode));
     }
 
     @Test
@@ -67,6 +68,16 @@ public class ListNodeAboutTest {
         System.out.println(Arrays.toString(ex3));
         ListNode listNode = swapPairs.swapPairs(exNode3);
         System.out.println(Arrays.toString(ReverseList.initArray(listNode)));
+    }
+
+    @Test
+    public void removeRepeatNode() {
+        RemoveRepeatNode removeRepeatNode = new RemoveRepeatNode();
+        int[] ex4 = {1, 2, 3, 3, 4, 4, 5, 5, 6, 7, 8, 8};
+        System.out.println(Arrays.toString(ex4));
+        ListNode listNode = removeRepeatNode.deleteDuplicates(ReverseList.initList(ex4));
+        System.out.println(Arrays.toString(ReverseList.initArray(listNode)));
+
     }
 
 }
