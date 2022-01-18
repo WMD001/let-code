@@ -4,10 +4,13 @@ import com.fool.common.ListNode;
 import com.fool.easy.ReverseList;
 import com.fool.medium.RemoveNthNode;
 import com.fool.medium.RotateRight;
+import com.fool.medium.SwapPairs;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+
+import java.util.Arrays;
 
 public class ListNodeAboutTest {
 
@@ -56,6 +59,14 @@ public class ListNodeAboutTest {
 //        ListNode resNode = removeNthNode.removeNthFromEnd(exNode1, 2);
         ListNode resNode = removeNthNode.removeNthFromEndByOne(exNode1, 2);
         Assert.assertArrayEquals(new int[]{1,2,3,5}, ReverseList.initArray(resNode));
+    }
+
+    @Test
+    public void swapParis() {
+        SwapPairs swapPairs = new SwapPairs();
+        System.out.println(Arrays.toString(ex3));
+        ListNode listNode = swapPairs.swapPairs(exNode3);
+        System.out.println(Arrays.toString(ReverseList.initArray(listNode)));
     }
 
 }
