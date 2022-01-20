@@ -86,5 +86,12 @@ public class ListNodeAboutTest {
         System.out.println(Arrays.toString(ReverseList.initArray(partition)));
     }
 
+    @Test
+    public void reverseBetween() {
+        ReverseBetweenII reverseBetweenII = new ReverseBetweenII();
+        ListNode listNode = reverseBetweenII.reverseBetween(ReverseList.initList(new int[]{3,5}), 1, 2);
+        System.out.println(Arrays.toString(ReverseList.initArray(listNode)));
+    }
+
 }
 
